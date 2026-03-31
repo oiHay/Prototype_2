@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1982383914056434170}
   m_Layer: 0
   m_Name: SF_Character_FarmersDaughter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 7485805244404855805}
   m_Layer: 0
   m_Name: SF_Character_Farmer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,9 +502,11 @@ GameObject:
   - component: {fileID: 6092389788129406490}
   - component: {fileID: 4164550719312493548}
   - component: {fileID: 3542673456710461948}
+  - component: {fileID: 5745167409431929396}
+  - component: {fileID: 4179518051590742850}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -563,8 +565,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c195438369454a418a8acf022fca5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  _speed: 20
+  _speed: 15
   _xRange: 15
+  _zRangeBottom: 0
+  _zRangeTop: 15
 --- !u!114 &3542673456710461948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +583,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
   _projectile: {fileID: 79949128800754754, guid: 19c1482b5f5bfe043bc4d6bdb58016dc, type: 3}
   _shootInput: 32
+--- !u!65 &5745167409431929396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597171680345364769}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3.59, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!54 &4179518051590742850
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597171680345364769}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 32
+  m_CollisionDetection: 0
 --- !u!1 &4684762727224000688
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +706,7 @@ GameObject:
   - component: {fileID: 1380860056636208695}
   m_Layer: 0
   m_Name: Hips_jnt
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -972,7 +1024,7 @@ GameObject:
   - component: {fileID: 7164140780892091052}
   m_Layer: 0
   m_Name: SF_Character_FarmersWife
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1087,7 +1139,7 @@ GameObject:
   - component: {fileID: 1846579208387328805}
   m_Layer: 0
   m_Name: SF_Character_Wrangler
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
