@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour
 {
@@ -35,10 +36,8 @@ public class PlayerHealthManager : MonoBehaviour
     // O que acontece quando a colisão é detectada
     private void HandleDamageTaken(int damage) 
     {
-        // A vida atual do jogador diminui na quantidade de dano tomado
-        _currentHealth -= damage;
         // Função que cria um limitador máximo e mónimo para a variável, _currentHealth não pode passar de 0 nem de _maxHealth, se passar, torna-se um dos valores determinados
-        _currentHealth = Math.Clamp(_currentHealth, 0, _maxHealth);
+        _currentHealth = Math.Clamp(_currentHealth - damage, 0, _maxHealth);
 
         // Determina que o texto referenciado deve ser "Health: " mais a vida atual do jogador
         _healthText.text = "Health: " + _currentHealth;
@@ -50,11 +49,9 @@ public class PlayerHealthManager : MonoBehaviour
             OnDeath();
         }
     }
-
-    // O que acontece quando o método é chamado
+    
     private void OnDeath()
     {
-        Debug.Log("Game Over");
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex));
     }
-    
 }
