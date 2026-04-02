@@ -500,10 +500,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5824677994494821449}
   - component: {fileID: 6092389788129406490}
-  - component: {fileID: 4164550719312493548}
-  - component: {fileID: 3542673456710461948}
   - component: {fileID: 5745167409431929396}
   - component: {fileID: 4179518051590742850}
+  - component: {fileID: 4164550719312493548}
+  - component: {fileID: 3542673456710461948}
+  - component: {fileID: 7400424733012786735}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -553,36 +554,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4164550719312493548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4597171680345364769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c195438369454a418a8acf022fca5e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  _speed: 15
-  _xRange: 15
-  _zRangeBottom: 0
-  _zRangeTop: 15
---- !u!114 &3542673456710461948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4597171680345364769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cbe2c05109bd904cae318cf0830cac7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
-  _projectile: {fileID: 79949128800754754, guid: 19c1482b5f5bfe043bc4d6bdb58016dc, type: 3}
-  _shootInput: 32
 --- !u!65 &5745167409431929396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -631,6 +602,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
+--- !u!114 &4164550719312493548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597171680345364769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c195438369454a418a8acf022fca5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  _speed: 15
+  _xRange: 15
+  _zRangeBottom: 0
+  _zRangeTop: 15
+--- !u!114 &3542673456710461948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597171680345364769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbe2c05109bd904cae318cf0830cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerProjectile
+  _projectile: {fileID: 79949128800754754, guid: 19c1482b5f5bfe043bc4d6bdb58016dc, type: 3}
+  _shootInput: 32
+--- !u!114 &7400424733012786735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597171680345364769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c987835979def724c9e62d58a24fa864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthManager
 --- !u!1 &4684762727224000688
 GameObject:
   m_ObjectHideFlags: 0
